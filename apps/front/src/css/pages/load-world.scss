@@ -1,0 +1,105 @@
+@import '../utils.scss';
+
+header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main {
+
+    &-title {
+        font-size: 5em;
+        padding-left: 17vw;
+        padding-top: 5vh;
+    }
+
+    &-title2 {
+        font-size: 4em;
+        padding-left: 24vw;
+        padding-top: 5vh;
+    }
+
+    &-title3 {
+        font-size: 2.7em;
+        padding-left: 5vw;
+        padding-top: 5vh;
+    } 
+    &-loadsworlds {
+        margin: 5vh 1vw 5vh 1vw;
+        width: 96%;
+        border: 10px solid #aaaaaa;
+        border-radius: 3vw;
+        height: 25vh;
+        background-color: #bebebe;
+    }
+    &-fileinput {
+        padding-top: 5vh;
+        padding-left: 35vw;
+        font-size: 1.5em;
+    }
+}
+
+.world-icon {
+    width: 15vw;
+    height: 18vh;
+    margin: 1vh 2vw 1vh 2vw;
+    background-color: #bebebe;
+}
+
+
+
+.get-signature {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    &-topbarre {
+        width: 100%;
+        height: 15vh;
+        background-color: #aaaaaa;
+        & a {
+            padding-left: 5vw;
+            font-size: 2em;
+            text-decoration: underline;
+            color: #000;
+        }
+    }
+    &-title {
+        font-size: 5em;
+        padding: 5vh 0vw 5vh 10vw;
+    }
+    &-input {
+        font-size: 2em;
+        width: 40%;
+        height: 6%;
+        margin-top: 5vh;
+        margin-left: 10vw;
+        font-weight: 200;
+    }
+    &-worldicon {
+        background-color: #bebebe;
+        width: 35vw;
+        margin-top: 5vh;
+        margin-right: 5vw;
+        height: 35vh;
+        @include flexCenter(column, space-between);
+        border-radius: 10%;
+        &-name{
+            border-radius: 20px;
+            padding: 1.2vh 7.5vw;
+            font-size: 2.5em;
+            background-color: #a5a5a5;
+        }
+    }
+    &-button {
+        font-size: 3em;
+        width: 30%;
+        margin: 10vh 34vw 5vh 34vw;
+    }
+}

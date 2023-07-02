@@ -1,0 +1,36 @@
+@import '../utils.scss';
+
+.header {
+    height: 13vh;
+    width: 100%;
+    background-color: #00000039;
+}
+
+
+.main {
+    width: 100%;
+    &-title {
+        padding-left: 20vw;
+        padding-top: 20vh;
+        font-size: 5em;
+    }
+    &-subtitle {
+        padding-top: 5vh;
+        font-size: 3em;
+        padding-left: 30vw;
+    }
+    &-buttons {
+        width: 80%;
+        margin-top: 10vh;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        &-e {
+            height: 6vh;
+        }
+    }
+}

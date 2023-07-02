@@ -1,0 +1,19 @@
+{
+  "name": "front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.62.1",
+    "vite": "^4.3.9"
+  }, 
+  "dependencies": {
+    "handlebar": "^1.0.0",
+    "axios": "^1.4.0"
+  }
+}

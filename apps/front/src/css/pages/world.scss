@@ -1,0 +1,339 @@
+@import '../utils.scss';
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+    &-spinner {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+    &-title {
+        font-size: 2em;
+        color: #fff;
+        padding-top: 5vh;
+    }
+}
+
+.world {
+    &-settings {
+        z-index: 10;
+        width: 100%;
+        height: 87vh;
+        background-color: #6e6e6e;
+        &-name {
+            padding-left: 10vw;
+            padding-top: 15vh;
+            height: 10vh;
+            display: flex;
+            width: 40%;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            &-input {
+                height: 5vh;
+                font-size: 1.2em;
+                outline: none;
+                border: 1px solid #fff ;
+                border-radius: 15px;
+            }
+            &-button {
+                height: 5vh;
+                background-color: #7a60f1;
+                font-size: 1.2em;
+                color: #fff;
+                border: 3px solid #5a0ea0;
+                border-radius: 15px;
+            }
+        }
+        &-saveworld {
+            margin: 10vh 0vw 1vh 10vw;
+            font-size: 1.6em; 
+            border-radius: 15px;
+            padding: 1vw;
+        }
+    }
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    &-topbarre {
+        width: 100%;
+        height: 13vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+        &-backbutton {
+            width: 3.5vw;
+            height: 4vh;
+            border-radius:50%;
+            border: 3px solid #3498db;
+        }
+        &-title {
+            color: #fff;
+            font-size: 4em;
+        }
+        &-settings {
+            font-size: 2em;
+            border: 2px solid #fff;
+            padding: 5px;
+            border-radius: 10px;
+        }
+    }
+    &-map {
+        width: 100%;
+        height: 47vh;
+        background-color: #ececec;
+        @include flexCenter(row, space-between);
+        align-items: flex-start;
+        flex-wrap: wrap;
+        color: #fff;
+        padding-top: 1vh;
+        &-chrono {
+            width: 23vw;
+            height: 35vh;
+            //background-color: #000000af;
+        }
+        &-levelbarre {
+            & .fg {
+                border: 5px solid #000;
+                background: linear-gradient(to right, #4d4d4d, rgb(151, 151, 151));
+                border-radius: 5px;
+                margin: 2vh 3vw 1vh 3vw;
+                width: 41vw;
+                height: 2.2vh;
+                & .bg {
+                    position: relative;
+                    width: 0%;
+                    height: 2.2vh;
+                    background-color: #08ba99;
+                }
+            }
+            & .world-xp {
+                text-align: center;
+                font-size: 1.3em;
+            }
+            color: #000;
+            width: 48vw;
+            height: 35vh;
+            //background-color: #000000af;
+        }
+        &-playerzone {
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 26vw;
+            height: 35vh;
+            background-color: #000000af;
+            & .title {
+                padding-top: 0.5vh;
+                font-size: 3.8em;
+            }
+            & .subtitle {
+                font-size: 1.8em;
+            }
+        }
+        &-population {
+            width: 100vw;
+            height: 10vh;
+            //background-color: #000000af;
+
+            & .population-container {
+                width: 50vw;
+                height: 10vh;
+                @include flexCenter(row, space-around);
+                & .population-e {
+                    background-color: #000;
+                    width: 13vw;
+                    height: 5vh;
+                    border-width: 1vw;
+                    border-radius: 1.5vw;  
+                }
+
+                & #total-population {
+                    border: 0.5vw solid #3498db;
+                }
+
+                & #working-population {
+                    border: 0.5vw solid #874949;
+                }
+
+                & #rest-population {
+                    border: 0.5vw solid #237868;
+                }
+            }
+        }
+    }
+    &-board {
+        
+        width: 100%;
+        background-color: #5b5b5b;
+        height: 40vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        &-ressources {
+            width: 15vw;
+            height: 35vh;
+            background-color: #fff;
+            &-barre {
+                @include flexCenter(row, space-around); 
+                height: 3vh;
+                width: 8vw;
+                align-items: center;
+                padding-left: 2vw;
+                padding-top: 3.7vh;
+            }
+        }
+        &-buildings {
+            width: 40vw;
+            height: 35vh;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            &-icons {
+                width: 36vw;
+                height: 35vh;
+                background-color: #b3b2b2d3;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                overflow: scroll;
+                overflow-x: hidden;
+                & img {
+                    width: 4vw;
+                    margin: 4px 5px;
+                    padding: 10px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                }
+            }
+            &-menus {
+                width: 25vw;
+                height: 35vh;
+                background-color: #fff;
+            }
+        }
+    }
+    &-settings {
+        z-index: 5;
+        display: none;
+        position: absolute;
+        top: 13vh;
+        width: 100%;
+        height: 87vh;
+    }
+}
+
+.alertpage {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000af;
+    &-saveworld {
+            width: 100%;
+            height: auto;
+            display: block;
+        &-box {
+            width: 100%;
+            height: 70%;
+            margin: 10vh 0px;
+            padding: 5vh 0px 5vh 0px;
+            background-color: #fff;
+            &-title {
+                font-size: 6rem;
+                padding-left: 30vw;
+                padding-top: 3vh;
+                font-family: 'Prosto One', cursive;
+                font-style: italic;
+                color: red;
+            }
+            &-description {
+                padding: 5vh 5vw 5vh 5vw;
+                font-size: 1.8rem;
+                font-family: 'Prosto One', cursive;
+                width: 40vw;
+            }
+            &-schema {
+                width: 40vw;
+                height: auto;
+                padding: 2em;
+                border: 1px solid #000;
+                &-file-icon {
+                    width: 10vw;
+                }
+            }
+            &-code {
+                font-family: 'Prosto One', cursive;
+                padding: 10vh 5vw 3vh 5vw;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+.rsrc-icon {
+    width: 4vw;
+    height: 4.5vh;
+    object-fit: contain;
+}
+
+.clock {
+    animation: fill 15s linear forwards;
+  }
+  
+.clock-circle {
+    stroke: #75c98f;
+    fill: none;
+    stroke-width: 4px;
+    stroke-dasharray: 251.2;
+    stroke-dashoffset: 251.2;
+    //animation: fill-progress 5s linear forwards;
+}
+
+.animation-ended {
+    animation: fill-progress 5s linear forwards;
+}
+
+
+
+#signature {
+    font-size: 2rem;
+}
+
+#saveworld-back-button {
+    margin: 1vh 35vw 3vh 45vw;
+    font-size: 2rem;
+    border: 2px solid #b30f0f;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+strong {
+    color:#b30f0f;
+}

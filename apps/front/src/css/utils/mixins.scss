@@ -1,0 +1,13 @@
+
+@mixin flexCenter($direction, $space) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $space;
+    align-items: center;
+}
+
+@mixin addColor($color, $border, $back) {
+    background-color: $back;
+    color: $color;
+    border: 5px solid $border;
+}

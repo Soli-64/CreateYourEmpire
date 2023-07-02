@@ -1,0 +1,44 @@
+@import '../utils.scss';
+
+.mine {
+    &-menu {
+        width: 25vw;
+        height: 35vh;
+        animation: 1.3s slideLeft;
+        &-stats {
+            font-size: 1.4em;
+            @include flexCenter(column, space-around);
+            height: 35vh;
+            width: 23vw;
+
+            &:only-child {
+                align-items: flex-start;
+                padding-left: 2vw;
+            }
+
+            &-title {
+                //padding-top: 1vh;
+                font-size: 1.6em;
+            }
+            &-description {
+                padding-left: 2vw;
+                line-height: 3.5vh;
+            }
+            &-level {
+                padding-left: 2vw;
+                //margin-top: 0.6vh;
+            }
+            &-cost {
+                padding-left: 2vw;
+                &-title {
+                    margin-top: 0.6vh;
+                }
+                &-e {
+                    padding-left: 2vw;
+                    margin-top: 1vh;
+                }
+            }
+        }
+    }
+}
+

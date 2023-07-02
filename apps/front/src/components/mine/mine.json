@@ -1,0 +1,106 @@
+{
+    "name": "mine",
+    "imagePath": "/public/images/icons/buildings/mine.png",
+    "level": {
+        "1": {
+            "gain": {"gainIron": 10, "gainGold": 5}, 
+            "maxDayliLoops": 20,
+            "forUpgrade": {"iron": 30, "gold": 15}
+        },
+        "2": {
+            "gain": {"gainIron": 15, "gainGold": 10}, 
+            "maxDayliLoops": 25,
+            "forUpgrade": {"iron": 350, "gold": 175}
+        },
+        "3": {
+            "gain": {"gainIron": 20, "gainGold": 15}, 
+            "maxDailyLoops": 30,
+            "forUpgrade": {"iron": 1000, "gold": 500}
+        },
+        "4": {
+            "gain": {"gainIron": 25, "gainGold": 20}, 
+            "maxDailyLoops": 35,
+            "forUpgrade": {"iron": 1500, "gold": 750}
+        },
+        "5": {
+            "gain": {"gainIron": 30, "gainGold": 25}, 
+            "maxDailyLoops": 40,
+            "forUpgrade": {"iron": 2000, "gold": 1000}
+        },
+        "6": {
+            "gain": {"gainIron": 35, "gainGold": 30}, 
+            "maxDailyLoops": 45,
+            "forUpgrade": {"iron":2500, "gold": 1250}
+        },
+        "7": {
+            "gain": {"gainIron": 40, "gainGold": 35}, 
+            "maxDailyLoops": 50,
+            "forUpgrade": {"iron": 3000, "gold": 1500}
+        },
+        "8": {
+            "gain": {"gainIron": 45, "gainGold": 40}, 
+            "maxDailyLoops": 55,
+            "forUpgrade": {"iron": 3500, "gold": 1750}
+        },
+        "9": {
+            "gain": {"gainIron": 50, "gainGold": 45}, 
+            "maxDailyLoops": 60,
+            "forUpgrade": {"iron": 4000, "gold": 2000}
+        },
+        "10": {
+            "gain": {"gainIron": 55, "gainGold": 50}, 
+            "maxDailyLoops": 65,
+            "forUpgrade": {"iron": 4500, "gold": 2250}
+        },
+        "11": {
+            "gain": {"gainIron": 60, "gainGold": 55}, 
+            "maxDailyLoops": 70,
+            "forUpgrade": {"iron": 5000, "gold": 2500}
+        },
+        "12": {
+            "gain": {"gainIron": 65, "gainGold": 60}, 
+            "maxDailyLoops": 75,
+            "forUpgrade": {"iron": 5500, "gold": 2750}
+        },
+        "13": {
+            "gain": {"gainIron": 70, "gainGold": 65}, 
+            "maxDailyLoops": 80,
+            "forUpgrade": {"iron": 6000, "gold": 3000}
+        },
+        "14": {
+            "gain": {"gainIron": 75, "gainGold": 70}, 
+            "maxDailyLoops": 85,
+            "forUpgrade": {"iron": 6500, "gold": 3250}
+        },
+        "15": {
+            "gain": {"gainIron": 80, "gainGold": 75}, 
+            "maxDailyLoops": 90,
+            "forUpgrade": {"iron": 7000, "gold": 3500}
+        },
+        "16": {
+            "gain": {"gainIron": 85, "gainGold": 80}, 
+            "maxDailyLoops": 95,
+            "forUpgrade": {"iron": 7500, "gold": 3750}
+        },
+        "17": {
+            "gain": {"gainIron": 90, "gainGold": 85}, 
+            "maxDailyLoops": 100,
+            "forUpgrade": {"iron": 8000, "gold": 4000}
+        },
+        "18": {
+            "gain": {"gainIron": 95, "gainGold": 90}, 
+            "maxDailyLoops": 105,
+            "forUpgrade": {"iron": 8500, "gold": 4250}
+        },
+        "19": {
+            "gain": {"gainIron": 100, "gainGold": 95}, 
+            "maxDailyLoops": 110,
+            "forUpgrade": {"iron": 9000, "gold": 4500}
+        },
+        "20": {
+            "gain": {"gainIron": 105, "gainGold": 100}, 
+            "maxDailyLoops": 115,
+            "forUpgrade": {"iron": 10000, "gold": 5000}
+        }
+    }
+}

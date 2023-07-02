@@ -1,0 +1,9 @@
+@import './utils/reset.scss';
+@import './pages/accueil.scss';
+@import './pages/load-world.scss';
+@import './pages/world.scss';
+@import './components/mine.scss';
+
+body {
+    overflow: hidden;
+}

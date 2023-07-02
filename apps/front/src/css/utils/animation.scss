@@ -1,0 +1,62 @@
+
+@keyframes popUp {
+    0% {
+        top: -75px;
+        opacity: 0.9;
+    }
+    75% {
+        opacity: 0.9;
+        top: 30px;
+    }
+    95% {
+        top: 10px;
+        opacity: 0.9;
+    }
+    100% {
+        
+        top: -15px;
+        opacity: 0;
+    }
+}
+
+@keyframes passage {
+    0% {
+        left: -200px;
+        opacity: 0.99;
+    }
+    25% {
+        left: 10vw;
+    }
+    75% {
+        left: 10vw;
+    }
+    99% {
+        left: 105vw;
+        opacity: 0.99;
+    }
+    100% {
+        opacity: 0;
+        left: 110vw;   
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100% {
+        opacity: 0.9;
+        transform: translate(0px);
+        
+    }
+}
+
+@keyframes fill-progress {
+    0% {
+        stroke-dashoffset: 251.2;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

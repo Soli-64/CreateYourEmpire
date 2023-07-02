@@ -1,0 +1,54 @@
+@import './mixins.scss';
+@import './animation.scss';
+
+.framed {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 1px 2px 1px 2px;
+    background-color: #b9b9b9dc;
+}
+
+.green {
+    @include addColor(#ffffff, #4c8e75, #88c092)
+}
+
+.red {
+    @include addColor(#ffffff, #e24f4f, #d88080)
+}
+
+.blue {
+    @include addColor(#ffffff, #1b68e6, #7a9df5)
+    
+}
+
+.button {
+    border-radius: 20px;
+    padding: 1vw;
+}
+
+.alert {
+    opacity: 0;
+    position: absolute;
+    top: 15px;
+    left: 10vw;
+    font-size: 2.8em;
+    padding: 0.5vh 0;
+    @include flexCenter(row, space-around);
+    width: 80vw;
+    height: 5.5vh;
+    border-radius: 20px;
+    animation: 2.5s passage;
+}
+
+.input-zone {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & input {
+        border-radius: 20px;
+    }
+    & button {
+        border-radius: 20px;
+        border: 1px solid #000;
+    }
+}

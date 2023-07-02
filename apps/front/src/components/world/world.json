@@ -1,0 +1,162 @@
+{
+  "levels": {
+    "0": {
+        "requireXp": 500
+    },
+    "1": { 
+        "requireXp": 1000 
+    },
+    "2": { 
+        "requireXp": 2000 
+    },
+    "3": { 
+        "requireXp": 3000 
+    },
+    "4": { 
+        "requireXp": 4000 
+    },
+    "5": { 
+        "requireXp": 5000 
+    },
+    "6": { 
+        "requireXp": 6000 
+    },
+    "7": { 
+        "requireXp": 7000 
+    },
+    "8": { 
+        "requireXp": 8000 
+    },
+    "9": { 
+        "requireXp": 9000 
+    },
+    "10": { 
+        "requireXp": 10000,
+        "techLevel": 1
+    },
+    "11": { 
+        "requireXp": 11000
+    },
+    "12": { 
+        "requireXp": 12000
+    },
+    "13": { 
+        "requireXp": 13000
+    },
+    "14": { 
+        "requireXp": 14000
+     },
+    "15": { 
+        "requireXp": 15000
+     },
+    "16": { 
+        "requireXp": 16000
+     },
+    "17": { 
+        "requireXp": 17000
+     },
+    "18": { 
+        "requireXp": 18000
+     },
+    "19": { 
+        "requireXp": 19000
+     },
+    "20": { 
+        "requireXp": 20000,
+        "techLevel": 2
+     },
+    "21": { 
+        "requireXp": 21000
+     },
+    "22": { 
+        "requireXp": 22000
+     },
+    "23": { 
+        "requireXp": 23000
+     },
+    "24": { 
+        "requireXp": 24000
+     },
+    "25": { 
+        "requireXp": 25000
+     },
+    "26": { 
+        "requireXp": 26000
+     },
+    "27": { 
+        "requireXp": 27000
+     },
+    "28": { 
+        "requireXp": 28000
+     },
+    "29": { 
+        "requireXp": 29000
+     },
+    "30": { 
+        "requireXp": 30000,
+        "techLevel": 3
+     },
+    "31": { 
+        "requireXp": 31000
+     },
+    "32": { 
+        "requireXp": 32000
+     },
+    "33": { 
+        "requireXp": 33000
+     },
+    "34": { 
+        "requireXp": 34000
+     },
+    "35": { 
+        "requireXp": 35000
+     },
+    "36": { 
+        "requireXp": 36000
+     },
+    "37": { 
+        "requireXp": 37000
+     },
+    "38": { 
+        "requireXp": 38000
+     },
+    "39": { 
+        "requireXp": 39000
+     },
+    "40": { 
+        "requireXp": 40000,
+        "techLevel": 4
+     },
+    "41": { 
+        "requireXp": 41000
+     },
+    "42": { 
+        "requireXp": 42000
+     },
+    "43": { 
+        "requireXp": 43000
+     },
+    "44": { 
+        "requireXp": 44000
+     },
+    "45": { 
+        "requireXp": 45000
+     },
+    "46": { 
+        "requireXp": 46000
+     },
+    "47": { 
+        "requireXp": 47000
+     },
+    "48": { 
+        "requireXp": 48000
+     },
+    "49": { 
+        "requireXp": 49000
+     },
+    "50": { 
+        "requireXp": 50000,
+        "techLevel": 5
+     }
+  }
+}

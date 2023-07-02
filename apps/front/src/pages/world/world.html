@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet"> 
+    <script src="./worldPage.js" type="module" defer></script>
+    <script src="./animation.js" type="module" defer></script>
+</head>
+<body>
+
+    <div class="loader">
+        <div class="loader-spinner"></div>
+        <p class="loader-title">Connexion au serveur</p>
+    </div>
+
+    <main class="game-content">
+
+        <nav class="game-content-topbarre">
+            <button class="game-content-topbarre-backbutton"></button>
+            <p class="game-content-topbarre-title"></p>
+            <p class="game-content-topbarre-settings">Paramètres</p>
+        </nav>
+
+        <div class="game-content-map">
+            
+            <div class="game-content-map-chrono">
+                <svg class="clock" width="100" height="100">
+                    <circle class="clock-circle" cx="50" cy="50" r="40"></circle>
+                </svg>
+            </div>
+            
+            <div class="game-content-map-levelbarre">
+
+                <section class="fg">
+                    <div class="bg">
+
+                    </div>
+                </section>
+
+                <p class="world-xp"><span id="actualXp">0</span> / <span id="requireXp">1000</span> xp</p>
+
+            </div>
+            
+            <div class="game-content-map-playerzone">
+
+                <h1 class="title" id="player-name">Soli-64</h1>
+                <h2 class="subtitle" id="player-id">#e6g5k7</h2>
+
+
+            </div>
+
+            <div class="game-content-map-population">
+
+                <section class="population-container">
+                    <div id="total-population" class="population-e">
+
+                    </div>
+                    <div id="working-population" class="population-e">
+
+                    </div>
+                    <div id="rest-population" class="population-e">
+
+                    </div>
+                </section>
+
+            </div>
+        
+        </div>
+
+        <div class="game-content-board">
+
+            <div class="game-content-board-ressources">
+                <div class="game-content-board-ressources-barre gold">OR: <span id="gold"></span></div>
+                <div class="game-content-board-ressources-barre iron"> <img src="/public/images/icons/rsrc/iron-icon.png" class="rsrc-icon" alt="">: <span id="iron"></span></div>
+                <div class="game-content-board-ressources-barre wood">BOIS: <span id="wood"></span></div>
+                <div class="game-content-board-ressources-barre wheat"><img src="/public/images/icons/rsrc/wheat-icon.png" class="rsrc-icon" alt="">: <span id="wheat"></span></div>
+                <div class="game-content-board-ressources-barre feed">NOURRITURE: <span id="feed"></span></div>
+            
+            </div>
+
+            <div class="game-content-board-buildings-icons"></div>
+
+            <div class="game-content-board-buildings-menus"></div>
+
+            </div>
+
+        <div class="game-content-settings">
+            <div class="world-settings">
+                <div class="world-settings-name">
+                    <input type="text" class="world-settings-name-input" placeholder="Nouveau nom">
+                    <button class="world-settings-name-button">Changer le nom</button>
+                </div>
+                <button id="worldSaveButton" class="world-settings-saveworld">Télécharger le fichier du monde</button>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="alertpage">    
+        <div class="alertpage-saveworld">
+            <div class="alertpage-saveworld-box">
+                <h1 class="alertpage-saveworld-box-title">Attention !</h1>
+                <div class="flex">
+                    <h2 class="alertpage-saveworld-box-description">
+                        Pour <strong>réouvrir votre monde</strong>, vous aurez besoin du fichier qui se télécharge actuellement et
+                        d'<strong>un code</strong> qui sert a vérifier 
+                        que le fichier n'a pas changé.
+                        <strong>Veillez a bien noter le code 
+                        et a ne pas modifier le fichier</strong>.
+                    </h2>
+                    <div class="alertpage-saveworld-box-schema">
+                        <div class="flex">
+                            <img class="alertpage-saveworld-box-schema-file-icon" src="/public/images/icons/files/worldfile.png" alt="">
+                            <p> + </p>
+                            <p>code</p>
+                            <p> -> </p>
+                            <p> Jeu </p>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="alertpage-saveworld-box-code">Votre code: <span id="signature">_ _ _ _ _ _</span></h2>
+                <button id="saveworld-back-button">OK</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

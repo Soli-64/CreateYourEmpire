@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script type="module" src="./load-world.js" defer></script>
+</head>
+<body>
+    <div id="dropzone">
+        <header>
+            <a href="../../../index.html">Accueil</a>
+        </header>
+        <main class="main">
+            <h1 class="main-title">Tu as déjà un monde ?</h1>
+            <h2 class="main-title2">Continue ton Aventure</h2>
+            <h3 class="main-title3">Fait un cliquer glissé du fichier et rentre ton mot de passe.</h3>
+            <div id="worlds-icons-container" class="main-loadsworlds flex"></div>
+            <input class="main-fileinput" type="file">
+
+            <div class="get-signature">
+                <div class="get-signature-topbarre flex">
+                    <a href="/index.html">Accueil</a>
+                </div>
+                <h2 class="get-signature-title">Entre le code de ton Monde.</h2>
+                <div class="flex">
+                    <input class="get-signature-input" type="text" id="signature-input" placeholder="Votre code">
+                    <div id="worldfile-icon" class="get-signature-worldicon">
+                        <h2 class="get-signature-worldicon-name" id="worldname"></h2>
+                        <img class="world-icon" src="/public/images/icons/files/worldfile.png" alt="icon du fichier world">
+                    </div>
+                </div>
+                <button class="get-signature-button" id="valid-signature">Valider</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+@import './utils/animation.scss';
+@import './utils/mixins.scss';
+@import './utils/elements.scss';
+
+.flex {
+    @include flexCenter(row, space-around);
+    flex-wrap: wrap;
+}
