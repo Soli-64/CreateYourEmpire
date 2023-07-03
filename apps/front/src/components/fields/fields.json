@@ -1,0 +1,14 @@
+{
+    "name": "mine",
+    "imagePath": "/public/images/icons/rsrc/wheat-icon.png",
+    "level": {
+        "1": {
+            "gain": {"wheat": 10}, 
+            "forUpgrade": {"iron": 30, "gold": 15}
+        },
+        "2": {
+            "gain": {"wheat": 15}, 
+            "forUpgrade": {"iron": 350, "gold": 175}
+        }
+    }
+}

@@ -1,7 +1,6 @@
 // Import du CSS
-import { Player } from '../../scripts/game-elements/player.js';
-import { World } from '../../components/world/world.js';
-import { Mine } from '../../components/mine/mine.js';
+import { Player } from '../../scripts/game-elements/player.class.js';
+import { mine, world } from '../../components/index.js'
 import { loadWorld } from '../../components/world/loadWorldFunction.js';
 import '../../css/style.scss'
 
@@ -26,6 +25,7 @@ document.querySelector('#saveworld-back-button').addEventListener('click', () =>
     document.querySelector('.alertpage').style.display = 'none'
 })
 
+// Vérification du mode d'ouverture du jeu
 if (mode === 'new') {
     document.querySelector('.game-content').style.display = 'flex'
     newWorld('')
@@ -43,10 +43,10 @@ if (mode === 'new') {
  */
 function newWorld (name, loadingWorld) {
 
-     let world = true
+     let worldInstance = true
 
     if (loadingWorld) {
-        world = loadingWorld
+        worldInstance = loadingWorld
     } else {
         const player = new Player('Soli64', 0, 0)
 
@@ -60,10 +60,10 @@ function newWorld (name, loadingWorld) {
             }
         }
 
-        world = new World(gamesBeginningStats)
+        worldInstance = new world.World(gamesBeginningStats)
         
-        world.addBuilding(new Mine(gamesBeginningStats, world))
-        world.addBuilding(new Mine(gamesBeginningStats, world))
+        worldInstance.addBuilding(new mine.Mine(gamesBeginningStats, worldInstance))
+        worldInstance.addBuilding(new mine.Mine(gamesBeginningStats, worldInstance))
     }
 
 }

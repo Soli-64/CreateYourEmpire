@@ -1,27 +1,9 @@
-import * as numberFile from './utils/number.js'
-import { Mine } from '../components/mine/mine.js'
-import { World } from '../components/world/world.js'
+
+export * as game from './utils/game.functions.js'
+export * as numberFunctions from './utils/number.functions.js'
+export * as elements from './utils/element.functions.js'
 
 
-export const numberFunctions = numberFile
-
-/**
- * 
- * @param {string} tagName 
- * @param {Object} attributes 
- * @param {string} innertext 
- * @returns {HTMLElement}
- */
-export function createElement(tagName, attributes, innertext) {
-    const element = document.createElement(tagName)
-    for (const [attribut, value] of Object.entries(attributes)) {
-        if (value !== null) {
-            element.setAttribute(attribut, value)
-        }
-    }
-    element.innerText = innertext
-    return element
-}
 
 /**
  * 

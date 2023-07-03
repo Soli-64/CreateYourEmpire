@@ -1,5 +1,5 @@
 import { savedWorldFile, signData } from "../../scripts/backFunctions.js";
-import { numberFunctions, createElement } from "../../scripts/utils.js";
+import { numberFunctions, elements, game } from "../../scripts/utils.js";
 //import Handlebars from 'handlebars'
 
 export class World {
@@ -22,7 +22,7 @@ export class World {
         this.level = gameStats.world['level'] ? gameStats.world['level'] : 0
         this.techLevel = gameStats.world['techLevel'] ? gameStats.world['techLevel'] : 0
         this.xp = gameStats.world['xp'] ? gameStats.world['xp'] : 0
-        this.farmBonus = this.techLevel > 0 ? this.techLevel : 1
+        this.farmBonus = this.techLevel > 0 ? this.techLevel : 10
 
         this.getJsonData()
 
@@ -33,7 +33,6 @@ export class World {
             this.addFarmedRessources(this.farmBonus)
             this.restartAnimation()
         })
-
         this.restartAnimation()
 
     }
@@ -49,23 +48,23 @@ export class World {
     }
 
     refreshInterface() {
-        this.xp += 200
         document.querySelector('#actualXp').innerHTML = this.xp
         document.querySelector('#requireXp').innerHTML = this.reqXp
+        document.querySelector('#world-level').innerHTML = this.level
         document.querySelector('.game-content-map-levelbarre .fg .bg').style.width = `${(this.xp / this.reqXp) * 100}%`
     }
 
-    increaseXp(value) {
-        if ((this.xp + value) > this.reqXp) {
+    increaseXp(value, bonus=1) {
+        if ((this.xp + game.applyBonus(value, bonus)) > this.reqXp) {
             this.level += 1
-            const restXp = (this.xp + value) - this.reqXp
+            const restXp = (this.xp + game.applyBonus(value, bonus)) - this.reqXp
             this.xp = 0
             this.increaseXp(restXp)
-        } else if ((this.xp + value) === this.reqXp) {
+        } else if ((this.xp + game.applyBonus(value, bonus)) === this.reqXp) {
             this.level += 1
             this.xp = 0
         } else {
-            this.xp += value
+            this.xp += game.applyBonus(value, bonus)
         }
         this.getJsonData()
     }
@@ -143,7 +142,7 @@ export class World {
         // Téléchargement du fichier
         const fileUrl = '/savedWorld.json'
         const fileName = `${this.name}.json`
-        const link = createElement('a', {href: fileUrl, download: fileName}, "")
+        const link = elements.createElement('a', {href: fileUrl, download: fileName}, "")
         document.body.appendChild(link)
         link.click()
         document.body.removeChild(link)

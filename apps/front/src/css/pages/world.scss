@@ -115,6 +115,12 @@
             //background-color: #000000af;
         }
         &-levelbarre {
+
+            & .world-level {
+                text-align: center;
+                font-size: 2em;
+            }
+
             & .fg {
                 border: 5px solid #000;
                 background: linear-gradient(to right, #4d4d4d, rgb(151, 151, 151));
@@ -319,8 +325,6 @@
 .animation-ended {
     animation: fill-progress 5s linear forwards;
 }
-
-
 
 #signature {
     font-size: 2rem;

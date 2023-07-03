@@ -45,3 +45,15 @@ export async function verifyDataSignature(content, signature) {
   }
 }
 
+/**
+ * Fonction qui retourne true si le mode est développement
+ * @returns {boolean}
+ */
+export async function verifyAppMode() {
+  try {
+    const response = await axios.get('http://localhost:3000/appMode')
+    return response
+  } catch {
+    console.error('Erreur verifyAppMode BackFunctions')
+  }
+}

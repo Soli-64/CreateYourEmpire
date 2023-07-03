@@ -1,7 +1,5 @@
-import { createElement } from "../../scripts/utils";
 import Handlebars  from 'handlebars';
-import { newUniqueId } from "../../scripts/utils/number.js";
-import { newAlert } from "../../scripts/utils/element";
+import { numberFunctions, elements } from "../../scripts/utils.js";
 
 export class Mine {
 
@@ -12,17 +10,15 @@ export class Mine {
     constructor (gamesInfos, world, level, id) {
 
         this.world = world
-
-        console.log(this.world)
-
         this.type = "Mine"
         this.player = gamesInfos.gamePlayer
-        this.id = id ? id : newUniqueId(this.player.gamesId, 5, 'all')
+        this.id = id ? id : numberFunctions.newUniqueId(this.player.gamesId, 5, 'all')
+        this.bonus = 0
         this.player.gamesId[this.id] = 'mineId' 
         this.__init__(() => {
             this.classLoop()
             // Ajout de l'icon a la barre des icons
-            const buttonElement = createElement('img', {class: 'mine-defaultmenu-logo', src: this.imgPath}, '')
+            const buttonElement = elements.createElement('img', {class: 'mine-defaultmenu-logo', src: this.imgPath}, '')
             document.querySelector('.game-content-board-buildings-icons').append(buttonElement)
             buttonElement.addEventListener('click', () => {
             if (document.querySelector(`.mine-menu`)) {
@@ -50,6 +46,14 @@ export class Mine {
     }
 
     /**
+     * Modifier le bonus
+     * @param {number} bonus 
+     */
+    setBonus(bonus) {
+        this.bonus = bonus
+    }
+
+    /**
      * Fonction qui récupère les informations dans mine.json
      * @param {Function} callback
      */
@@ -71,7 +75,7 @@ export class Mine {
     }
 
     addMenu() {
-        const menu = createElement('div', {class: `mine-menu`, id: `i${this.id}`}, '')
+        const menu = elements.createElement('div', {class: `mine-menu`, id: `i${this.id}`}, '')
         document.querySelector('.game-content-board-buildings-menus').innerHTML = ''
         menu.innerHTML += this.mineStatsTemplate()
         document.querySelector('.game-content-board-buildings-menus').append(menu)
@@ -137,14 +141,15 @@ export class Mine {
         })
         for (const isValid in checker) {
             if (checker[isValid] !== true) {
-                newAlert('Pas assez de ressources !', 'red')
+                elements.newAlert('Pas assez de ressources !', 'red')
                 return
             }
         }
         // Amélioration
         this.player.ressources.iron -= this.upgradeCost.iron
         this.player.ressources.gold -= this.upgradeCost.gold
-        newAlert(`Mine améliorée au niveau ${this.level+1}`, 'green')
+        elements.newAlert(`Mine améliorée au niveau ${this.level+1}`, 'green')
+        this.world.increaseXp(100, this.bonus)
         this.__init__(() => {}, this.level + 1)
     }
 

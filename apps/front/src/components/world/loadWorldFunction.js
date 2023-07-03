@@ -1,6 +1,6 @@
-import { Player } from "../../scripts/game-elements/player.js";
+import { Player } from "../../scripts/game-elements/player.class.js";
 import { createInstance } from "../../scripts/utils.js";
-import { World } from "./world.js";
+import { world } from "../index.js";
 
 /**
  * Retourne une Instance de World avec les paramètres dans le fichier chargé
@@ -36,7 +36,7 @@ export function loadWorld(jsonGameContent) {
     }
 
     // On créer l'instance du monde
-    const world = new World(gameBeginningStats)
+    const world = new world.World(gameBeginningStats)
 
     // On ajoute les batîments    
     const buildings = gamesFileData.actualsBuildings

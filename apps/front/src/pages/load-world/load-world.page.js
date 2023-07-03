@@ -1,5 +1,5 @@
 import { verifyDataSignature } from '../../scripts/backFunctions.js';
-import { createElement } from '../../scripts/utils.js';
+import { elements } from '../../scripts/utils.js';
 import '../../css/style.scss'
 
 const dropzone = document.getElementById('dropzone');
@@ -45,7 +45,7 @@ async function handleFile(file) {
     }
 
     document.querySelector('#worlds-icons-container').append(
-      createElement('img', { class: 'world-icon', src: '/public/images/icons/files/worldfile.png', id: 'world-icon' }, '')
+      elements.createElement('img', { class: 'world-icon', src: '/public/images/icons/files/worldfile.png', id: 'world-icon' }, '')
     );
 
     document.querySelector('#world-icon').addEventListener('click', async () => {
@@ -61,7 +61,7 @@ async function handleFile(file) {
         const signatureIsTrue = await verifyDataSignature(JSON.parse(content), signature);
 
         if (signatureIsTrue) {
-          const link = createElement('a', { href: `/src/pages/world/world.html?mode=load&content=${content}` }, '');
+          const link = elementscreateElement('a', { href: `/src/pages/world/world.html?mode=load&content=${content}` }, '');
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);

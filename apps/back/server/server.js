@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import { createFile } from '../src/world/saveWorld.js'
 import { signeData, verifySignature } from '../src/signer/signer.js'
+import { developmentModeIsActive } from '../env/mode.js'
 
 const app = express()
 
@@ -19,6 +20,10 @@ app.get('/signData/:content', (req, res) => {
 app.get('/verifyDataSignature/:content/:signature', (req, res) => {
     const sAreTheSame = verifySignature(req.params.content, req.params.signature) 
     res.send(sAreTheSame.toString())
+})
+
+app.get('/appMode', (req, res) => {
+    res.send(developmentModeIsActive())
 })
 
 app.listen(3000, () => {
